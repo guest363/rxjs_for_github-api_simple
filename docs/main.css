@@ -1,11 +1,11 @@
-._1Bk2QY-DZGmzfYGjmmifAb {
+.body {
   margin: 2em 20px;
 }
-.fPpxADP9vkINjsEu-j0zT {
+.git {
   display: grid;
   grid-template-columns: 250px 1fr;
 }
-._2yz-3olXwQ_CZvATXVExYU {
+.git--controlls {
   padding: 10px;
   box-sizing: border-box;
   display: flex;
@@ -13,12 +13,12 @@
   height: 200px;
   flex-direction: column;
 }
-._1ylm-ZGzbaoNKwVDNWO3HW {
+.git--view {
   display: flex;
   padding: 10px 20px;
   flex-wrap: wrap;
 }
-.V_ZA-SW5XhmFNgVmp3iIN {
+.git--view--card {
   max-width: 350px;
   max-height: 350px;
   width: 100%;
@@ -26,19 +26,19 @@
   margin: 30px 20px;
   position: relative;
 }
-._3Q5q3p6825df2dYGJHZwBK {
+.git--view--card--avatar {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
 }
-._2RtGHb4yUafroSsn7V3vKn {
+.git--view--card--name {
   position: absolute;
   bottom: 20%;
   left: 5%;
   color: white;
   font-size: 25px;
 }
-.UVvml8aJmnOrLOhFyCrY3 {
+.git--view--card--link {
   color: black;
   text-decoration: none;
   width: 100%;
@@ -48,7 +48,7 @@
   top: 0;
   left: 0;
 }
-.YcYHMY8On1uKU51TTiGdN {
+.git--view--card--action {
   display: inline-block;
   font-size: 18px;
 }

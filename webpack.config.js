@@ -49,7 +49,6 @@ module.exports = {
 					MiniCssExtractPlugin.loader,
 					{
 						loader: 'css-loader', // translates CSS into CommonJS
-						options: { modules: true, importLoaders: 1 }
 					},
 					{
 						loader: 'less-loader', // compiles Less to CSS
