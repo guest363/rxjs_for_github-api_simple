@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
@@ -10,7 +12,16 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist')
 	},
 
-	plugins: [new webpack.ProgressPlugin()],
+	plugins: [
+		new webpack.ProgressPlugin(),
+		new MiniCssExtractPlugin({
+			filename: '[name].css'
+		}),
+		new HtmWebpackPlugin({
+			hash: true,
+			filename: 'index.html',
+			template: 'index.html'
+		}),],
 
 	module: {
 		rules: [
@@ -35,11 +46,10 @@ module.exports = {
 			{
 				test: /\.less$/,
 				use: [
-					{
-						loader: 'style-loader', // creates style nodes from JS strings
-					},
+					MiniCssExtractPlugin.loader,
 					{
 						loader: 'css-loader', // translates CSS into CommonJS
+						options: { modules: true, importLoaders: 1 }
 					},
 					{
 						loader: 'less-loader', // compiles Less to CSS
